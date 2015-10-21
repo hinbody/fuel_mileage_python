@@ -1,5 +1,5 @@
 # Functions needed written
-* store\_current\_mileage()
+* store\_current\_mileage() *Done*
   - store the current mileage of the vehicle
 * store\_current\_gallons()
   - store the current number of gallons to fill
