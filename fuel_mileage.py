@@ -16,3 +16,9 @@ def store_current_data(miles, gallons, price_per_gallon):
     db_conn.execute('''INSERT INTO fuel (mileage, gallons, pricepergallon)
     VALUES (?, ?, ?)''', the_miles)
     db_config.commit()
+
+def get_all_data():
+  return db_conn.execute('SELECT * FROM fuel')
+
+def get_last_entry():
+  return db_conn.execute('SELECT * from fuel where oid = (select max(oid) from fuel)')
